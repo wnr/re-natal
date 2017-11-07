@@ -294,7 +294,7 @@ In addition to the instructions above on Linux you might need to
 start React Native packager manually with command `react-native start`.
 This was reported in [#3](https://github.com/drapanjanas/re-natal/issues/3)
 
-See this [tutorial](https://gadfly361.github.io/gadfly-blog/2016-11-13-clean-install-of-ubuntu-to-re-natal.html) on how to set up and run re-natal on a clean install of Ubuntu.
+See this [tutorial](https://gadfly361.github.io/gadfly-blog/posts-output/2016-11-13-clean-install-of-ubuntu-to-re-natal/) on how to set up and run re-natal on a clean install of Ubuntu.
 
 See also [Linux and Windows support](https://facebook.github.io/react-native/docs/linux-windows-support.html)
 in React Native docs.
