@@ -901,6 +901,13 @@ autoRequire = (enabled, globally = false) ->
   else
     log "Auto-Require feature is disabled in use-figwheel command"
 
+setFigwheelPort = (port, globally = false) ->
+  configFile = if globally then '.re-natal' else '.re-natal.local'
+  config = merge(readConfig(configFile, false), figwheelPort: port)
+  writeConfig(config, configFile)
+  log "Figwheel port is set to #{port}"
+  log "Please run: re-natal use-figwheel to take effect."
+
 cli._name = 're-natal'
 cli.version pkgJson.version
 
@@ -988,6 +995,12 @@ cli.command 'enable-source-maps'
   .description 'patches RN packager to server *.map files from filesystem, so that chrome can download them.'
   .action () ->
     patchReactNativePackager()
+
+cli.command 'set-figwheel-port <port>'
+  .description 'configures the port of figwheel server (port 3449 is default)'
+  .option '-g --global', 'use global .re-natal config instead of .re-natal.local'
+  .action (port, cmd) ->
+    setFigwheelPort(port, cmd.global)
 
 cli.command 'enable-auto-require'
   .description 'enables source scanning for automatic required module resolution in use-figwheel command.'
