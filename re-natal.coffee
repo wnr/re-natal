@@ -65,7 +65,7 @@ interfaceConf   =
       common:  ["events.cljs", "subs.cljs", "db.cljs"]
       other:   [["reagent_dom.cljs","reagent/dom.cljs"], ["reagent_dom_server.cljs","reagent/dom/server.cljs"]]
     deps:      ['[reagent "0.7.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server cljsjs/create-react-class]]'
-                '[re-frame "0.9.2"]']
+                '[re-frame "0.10.4"]']
     shims:     ["cljsjs.react", "cljsjs.react.dom", "cljsjs.react.dom.server", "cljsjs.create-react-class"]
     sampleCommandNs: '(in-ns \'$PROJECT_NAME_HYPHENATED$.ios.core)'
     sampleCommand: '(dispatch [:set-greeting "Hello Native World!"])'
