@@ -380,6 +380,7 @@ updateGitIgnore = (platforms) ->
 
 findPackagerFileToPatch = () ->
   files = [
+    "node_modules/metro/src/Server/index.js",
     "node_modules/metro-bundler/src/Server/index.js",
     "node_modules/metro-bundler/build/Server/index.js",
     "node_modules/react-native/packager/src/Server/index.js"]
@@ -394,7 +395,7 @@ patchReactNativePackager = () ->
   fileToPatch = findPackagerFileToPatch()
   log "Patching file #{fileToPatch} to serve *.map files."
   edit fileToPatch,
-    [[/match.*\.map\$\/\)/m, "match(/index\\..*\\.map$/)"]]
+    [[/match\(\/\\.map\$\/\)/m, "match(/index\\..*\\.map$/)"]]
   log "If the React Native packager is running, please restart it."
 
 shimCljsNamespace = (ns) ->
