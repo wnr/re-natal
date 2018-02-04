@@ -34,8 +34,8 @@ ipAddressRx     = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/i
 debugHostRx     = /host]\s+\?:\s+@".*";/g
 namespaceRx     = /\(ns\s+([A-Za-z0-9.-]+)/g
 jsRequireRx     = /js\/require "(.+)"/g
-rnVersion       = '0.50.3'
-rnWinVersion    = '0.50.0-rc.2'
+rnVersion       = '0.52.0'
+rnWinVersion    = '0.52.0-rc.0'
 rnPackagerPort  = 8081
 process.title   = 're-natal'
 buildProfiles     =
@@ -380,6 +380,7 @@ updateGitIgnore = (platforms) ->
 
 findPackagerFileToPatch = () ->
   files = [
+    "node_modules/metro/src/Server/index.js",
     "node_modules/metro-bundler/src/Server/index.js",
     "node_modules/metro-bundler/build/Server/index.js",
     "node_modules/react-native/packager/src/Server/index.js"]
@@ -394,7 +395,7 @@ patchReactNativePackager = () ->
   fileToPatch = findPackagerFileToPatch()
   log "Patching file #{fileToPatch} to serve *.map files."
   edit fileToPatch,
-    [[/match.*\.map\$\/\)/m, "match(/index\\..*\\.map$/)"]]
+    [[/match\(\/\\.map\$\/\)/m, "match(/index\\..*\\.map$/)"]]
   log "If the React Native packager is running, please restart it."
 
 shimCljsNamespace = (ns) ->
