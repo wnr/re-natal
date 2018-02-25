@@ -8,7 +8,7 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "check-dependencies": "^1.0.1",
-    "coffee-script": "^1.9.3",
+    "coffeescript": "^1.9.3",
     "commander": "^2.8.1",
     "deepmerge": "^1.5.2",
     "fs-extra": "^0.26.5",
