@@ -351,6 +351,9 @@ $ re-natal use-figwheel
 This is needed to regenerate index.\*.js files which includes `require` calls to all local images.
 After this you can use a new image in your cljs code.
 
+If your images aren't able to be required after running `re-natal use-figwheel`,
+you may need to also run `react-native run-android`.
+
 ## Upgrading existing Re-Natal project
 
 #### Upgrading React Native version
