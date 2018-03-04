@@ -83,7 +83,7 @@ interfaceConf   =
     sources:
       common:  []
       other:   [["sablono_compiler.clj","sablono/compiler.clj"],["support.cljs","re_natal/support.cljs"]]
-    deps:      ['[rum "0.10.8" :exclusions [cljsjs/react cljsjs/react-dom sablono]]']
+    deps:      ['[rum "0.11.2" :exclusions [cljsjs/react cljsjs/react-dom sablono]]']
     shims:     ["cljsjs.react", "cljsjs.react.dom", "sablono.core"]
     sampleCommandNs: '(in-ns \'$PROJECT_NAME_HYPHENATED$.ios.core)'
     sampleCommand: '(swap! app-state assoc :greeting "Hello Clojure in iOS and Android with Rum!")'
