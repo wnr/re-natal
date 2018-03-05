@@ -19,7 +19,7 @@ For more ClojureScript React Native resources visit [cljsrn.org](http://cljsrn.o
 Contributions are very welcome.
 
 ## Status
-- Uses [React Native] v0.52.0
+- Uses [React Native] v0.53.0
 - Reusable codebase between iOS and Android
 - Figwheel used for REPL and live coding
   - Works in iOS (real device and simulator)
