@@ -97,7 +97,9 @@ This command needs to be run every time you switch to the development profile or
 
 NOTE: You might need to restart React Native Packager and reload your app.
 
-Start the Figwheel REPL with
+#### Starting a standalone Figwheel REPL
+
+Start a Figwheel REPL from the command line with:
 
 ```
 $ lein figwheel [ios | android]
