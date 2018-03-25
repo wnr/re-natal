@@ -106,7 +106,7 @@ $ lein figwheel [ios | android]
 If all went well you should see the REPL prompt and changes in source files should be hot-loaded by Figwheel.
 
 #### Starting Figwheel REPL from nREPL
-You can also start Figwheel from within an existing nREPL session. Start a REPL with `lein repl` or, if using emacs and CIDER for editor integration, `cider-jack-in`. Then in the REPL prompt type:
+You can also start Figwheel from within an existing nREPL session. Start a REPL with `lein repl` or, if using emacs and CIDER for editor integration, `cider-jack-in` (`C-c M-j`). Then in the REPL prompt type:
 ```
 user=> (start-figwheel "ios")
 ```
