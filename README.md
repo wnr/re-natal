@@ -97,7 +97,9 @@ This command needs to be run every time you switch to the development profile or
 
 NOTE: You might need to restart React Native Packager and reload your app.
 
-Start the Figwheel REPL with
+#### Starting a standalone Figwheel REPL
+
+Start a Figwheel REPL from the command line with:
 
 ```
 $ lein figwheel [ios | android]
@@ -106,11 +108,7 @@ $ lein figwheel [ios | android]
 If all went well you should see the REPL prompt and changes in source files should be hot-loaded by Figwheel.
 
 #### Starting Figwheel REPL from nREPL
-To start Figwheel from within nREPL session:
-```
-$ lein repl
-```
-Then in the nREPL prompt type:
+You can also start Figwheel from within an existing nREPL session. Start a REPL with `lein repl` or, if using emacs and CIDER for editor integration, `cider-jack-in` (`C-c M-j`). Then in the REPL prompt type:
 ```
 user=> (start-figwheel "ios")
 ```
