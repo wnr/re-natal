@@ -507,7 +507,7 @@ generateWindowsProject = (projName) ->
   exec "node -e \"require('react-native-windows/local-cli/generate-windows')('.', '#{projName}', '#{projName}')\""
   fs.unlinkSync 'App.windows.js'
 
-  appReactPagePath = "windows/#{projName}/MainPage.cs"
+  appReactPagePath = "windows/#{projName}/MainReactNativeHost.cs"
   edit appReactPagePath, [[/public.*JavaScriptMainModuleName(.*\s+){4}return\s+"index";(\s+.*){2}/g, ""]]
 
 generateWpfProject = (projName) ->
