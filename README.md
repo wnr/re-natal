@@ -294,9 +294,6 @@ This was reported in [#3](https://github.com/drapanjanas/re-natal/issues/3)
 
 See this [tutorial](https://gadfly361.github.io/gadfly-blog/posts-output/2016-11-13-clean-install-of-ubuntu-to-re-natal/) on how to set up and run re-natal on a clean install of Ubuntu.
 
-See also [Linux and Windows support](https://facebook.github.io/react-native/docs/linux-windows-support.html)
-in React Native docs.
-
 ## Support of UWP and WPF apps (using react-native-windows)
 
 To start new project with UWP app:
