@@ -1,7 +1,8 @@
                                                      {:id           "$PLATFORM$"
                                                       :source-paths ["src" "env/dev"]
                                                       :figwheel     true
-                                                      :compiler     {:output-to     "target/$PLATFORM$/not-used.js"
+                                                      :compiler     {:output-to     "target/$PLATFORM$/index.js"
                                                                      :main          "env.$PLATFORM$.main"
                                                                      :output-dir    "target/$PLATFORM$"
-                                                                     :optimizations :none}}
+                                                                     :optimizations :none
+                                                                     :target :nodejs}}

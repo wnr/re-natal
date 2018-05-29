@@ -6,4 +6,5 @@
                                                                    :static-fns    true
                                                                    :optimize-constants true
                                                                    :optimizations :advanced
+                                                                   :target :nodejs
                                                                    :closure-defines {"goog.DEBUG" false}}}

@@ -34,8 +34,8 @@ ipAddressRx     = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/i
 debugHostRx     = /host]\s+\?:\s+@".*";/g
 namespaceRx     = /\(ns\s+([A-Za-z0-9.-]+)/g
 jsRequireRx     = /js\/require "(.+)"/g
-rnVersion       = '0.53.0'
-rnWinVersion    = '0.53.0-rc.1'
+rnVersion       = '0.55.4'
+rnWinVersion    = '0.55.0-rc.0'
 rnPackagerPort  = 8081
 process.title   = 're-natal'
 buildProfiles     =
@@ -64,9 +64,9 @@ interfaceConf   =
     sources:
       common:  ["events.cljs", "subs.cljs", "db.cljs"]
       other:   [["reagent_dom.cljs","reagent/dom.cljs"], ["reagent_dom_server.cljs","reagent/dom/server.cljs"]]
-    deps:      ['[reagent "0.7.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server cljsjs/create-react-class]]'
-                '[re-frame "0.10.4"]']
-    shims:     ["cljsjs.react", "cljsjs.react.dom", "cljsjs.react.dom.server", "cljsjs.create-react-class"]
+    deps:      ['[reagent "0.8.1" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server cljsjs/create-react-class]]'
+                '[re-frame "0.10.5"]']
+    shims:     []
     sampleCommandNs: '(in-ns \'$PROJECT_NAME_HYPHENATED$.ios.core)'
     sampleCommand: '(dispatch [:set-greeting "Hello Native World!"])'
   'om-next':
@@ -74,7 +74,7 @@ interfaceConf   =
     sources:
       common:  ["state.cljs"]
       other:   [["support.cljs","re_natal/support.cljs"]]
-    deps:      ['[org.omcljs/om "1.0.0-beta1" :exclusions [cljsjs/react cljsjs/react-dom]]']
+    deps:      ['[org.omcljs/om "1.0.0-beta3" :exclusions [cljsjs/react cljsjs/react-dom]]']
     shims:     ["cljsjs.react", "cljsjs.react.dom"]
     sampleCommandNs: '(in-ns \'$PROJECT_NAME_HYPHENATED$.state)'
     sampleCommand: '(swap! app-state assoc :app/msg "Hello Native World!")'
@@ -131,10 +131,6 @@ ensureExecutableAvailable = (executable) ->
     exec "type #{executable}"
 
 isYarnAvailable = () ->
-  try
-    ensureExecutableAvailable('yarn')
-    true
-  catch e
     false
 
 isSomeDepsMissing = () ->
