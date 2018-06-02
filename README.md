@@ -124,7 +124,7 @@ user=> (start-figwheel "ios" "android")
 #### Changing the default Figwheel port
 In case you have a conflict with the default Figwheel port you can change it as follows:
 1. Change the port in project.clj (as per Figwheel docs)
-1. Run `re-nata set-figwheel-port <port>`
+1. Run `re-natal set-figwheel-port <port>`
 1. Run `re-natal use-figwheel` 
 
 ## Running the app
