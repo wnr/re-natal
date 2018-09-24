@@ -769,7 +769,7 @@ generateDevScripts = () ->
 
     for platform in platforms
       moduleMap = generateRequireModulesCode(platformModulesAndImages(config, platform))
-      fs.writeFileSync "index.#{platform}.js", "#{moduleMap}require('figwheel-bridge').withModules(modules).start('#{projName}','#{platform}','#{devHost[platform]}');"
+      fs.writeFileSync "index.#{platform}.js", "#{moduleMap}require('./figwheel-bridge').withModules(modules).start('#{projName}','#{platform}','#{devHost[platform]}');"
       log "index.#{platform}.js was regenerated"
 
     updateIosRCTWebSocketExecutor(devHost.ios)
