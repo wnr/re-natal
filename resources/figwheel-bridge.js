@@ -152,15 +152,17 @@ function importJs(src, success, error) {
 }
 
 function interceptRequire() {
-    var oldRequire = window.require;
+    var oldRequire = window.__r;
     console.info("Shimming require");
-    window.require = function (id) {
+    function newRequire (id) {
         console.info("Requiring: " + id);
         if (externalModules[id]) {
             return externalModules[id];
         }
         return oldRequire(id);
-    };
+    }
+    window.require = newRequire;
+    window.__r = newRequire;
 }
 
 function serverBaseUrl(host) {
